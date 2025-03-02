@@ -1,4 +1,4 @@
-# OpenapiClient::TimeZonesApi
+# PocketsmithRubyClient::TimeZonesApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -19,22 +19,22 @@ Lists time zones.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TimeZonesApi.new
+api_instance = PocketsmithRubyClient::TimeZonesApi.new
 
 begin
   # List time zones
   result = api_instance.time_zones_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TimeZonesApi->time_zones_get: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TimeZone>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TimeZonesApi->time_zones_get_with_http_info: #{e}"
 end
 ```

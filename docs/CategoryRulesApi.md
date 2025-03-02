@@ -1,4 +1,4 @@
-# OpenapiClient::CategoryRulesApi
+# PocketsmithRubyClient::CategoryRulesApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -20,26 +20,26 @@ Creates a rule to allocate a category to transactions.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CategoryRulesApi.new
+api_instance = PocketsmithRubyClient::CategoryRulesApi.new
 id = 42 # Integer | The unique identifier of the category.
 opts = {
-  categories_id_category_rules_post_request: OpenapiClient::CategoriesIdCategoryRulesPostRequest.new({payee_matches: 'Countdown'}) # CategoriesIdCategoryRulesPostRequest | 
+  categories_id_category_rules_post_request: PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest.new({payee_matches: 'Countdown'}) # CategoriesIdCategoryRulesPostRequest | 
 }
 
 begin
   # Create category rule in category
   result = api_instance.categories_id_category_rules_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CategoryRulesApi->categories_id_category_rules_post: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CategoryRule>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CategoryRulesApi->categories_id_category_rules_post_with_http_info: #{e}"
 end
 ```
@@ -95,23 +95,23 @@ Lists all category rules belonging to a user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CategoryRulesApi.new
+api_instance = PocketsmithRubyClient::CategoryRulesApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List category rules in user
   result = api_instance.users_id_category_rules_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CategoryRulesApi->users_id_category_rules_get: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CategoryRule>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CategoryRulesApi->users_id_category_rules_get_with_http_info: #{e}"
 end
 ```

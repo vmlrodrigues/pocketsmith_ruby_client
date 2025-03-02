@@ -1,4 +1,4 @@
-# OpenapiClient::AttachmentVariants
+# PocketsmithRubyClient::AttachmentVariants
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::AttachmentVariants.new(
+instance = PocketsmithRubyClient::AttachmentVariants.new(
   large_url: https://image.com/image.png,
   thumb_url: https://image.com/image.png
 )

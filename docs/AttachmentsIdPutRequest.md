@@ -1,4 +1,4 @@
-# OpenapiClient::AttachmentsIdPutRequest
+# PocketsmithRubyClient::AttachmentsIdPutRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::AttachmentsIdPutRequest.new(
+instance = PocketsmithRubyClient::AttachmentsIdPutRequest.new(
   title: Invoice for taxi
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::CategoriesIdCategoryRulesPostRequest
+# PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::CategoriesIdCategoryRulesPostRequest.new(
+instance = PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest.new(
   payee_matches: Countdown,
   apply_to_uncategorised: true,
   apply_to_all: false

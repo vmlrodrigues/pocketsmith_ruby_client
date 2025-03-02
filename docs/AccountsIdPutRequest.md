@@ -1,4 +1,4 @@
-# OpenapiClient::AccountsIdPutRequest
+# PocketsmithRubyClient::AccountsIdPutRequest
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::AccountsIdPutRequest.new(
+instance = PocketsmithRubyClient::AccountsIdPutRequest.new(
   title: Savings,
   currency_code: NZD,
   type: bank,

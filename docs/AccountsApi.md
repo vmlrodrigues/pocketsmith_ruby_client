@@ -1,4 +1,4 @@
-# OpenapiClient::AccountsApi
+# PocketsmithRubyClient::AccountsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -25,22 +25,22 @@ Deletes an account and all its data by ID, optionally merge scenarios into anoth
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the account.
 
 begin
   # Delete account
   api_instance.accounts_id_delete(id)
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_delete: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_delete_with_http_info: #{e}"
 end
 ```
@@ -95,23 +95,23 @@ Gets an account by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the account.
 
 begin
   # Get account
   result = api_instance.accounts_id_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_get: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Account>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_get_with_http_info: #{e}"
 end
 ```
@@ -166,26 +166,26 @@ Updates and returns an account by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the account.
 opts = {
-  accounts_id_put_request: OpenapiClient::AccountsIdPutRequest.new # AccountsIdPutRequest | 
+  accounts_id_put_request: PocketsmithRubyClient::AccountsIdPutRequest.new # AccountsIdPutRequest | 
 }
 
 begin
   # Update account
   result = api_instance.accounts_id_put(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_put: #{e}"
 end
 ```
@@ -203,7 +203,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Account>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->accounts_id_put_with_http_info: #{e}"
 end
 ```
@@ -241,23 +241,23 @@ Lists accounts belonging to an institution by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the institution.
 
 begin
   # List accounts in institution
   result = api_instance.institutions_id_accounts_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->institutions_id_accounts_get: #{e}"
 end
 ```
@@ -275,7 +275,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Account>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->institutions_id_accounts_get_with_http_info: #{e}"
 end
 ```
@@ -312,23 +312,23 @@ Lists all accounts belonging to the user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List accounts in user
   result = api_instance.users_id_accounts_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_get: #{e}"
 end
 ```
@@ -346,7 +346,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Account>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_get_with_http_info: #{e}"
 end
 ```
@@ -383,26 +383,26 @@ Creates and returns an account belonging to the user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
-  users_id_accounts_post_request: OpenapiClient::UsersIdAccountsPostRequest.new({institution_id: 42, title: 'Foo', currency_code: 'NZD', type: 'bank'}) # UsersIdAccountsPostRequest | 
+  users_id_accounts_post_request: PocketsmithRubyClient::UsersIdAccountsPostRequest.new({institution_id: 42, title: 'Foo', currency_code: 'NZD', type: 'bank'}) # UsersIdAccountsPostRequest | 
 }
 
 begin
   # Create an account in user
   result = api_instance.users_id_accounts_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_post: #{e}"
 end
 ```
@@ -420,7 +420,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Account>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_post_with_http_info: #{e}"
 end
 ```
@@ -458,26 +458,26 @@ Updates the display order of accounts belonging to the user, by accepting an arr
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AccountsApi.new
+api_instance = PocketsmithRubyClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
-  users_id_accounts_put_request: OpenapiClient::UsersIdAccountsPutRequest.new({accounts: [OpenapiClient::Account.new]}) # UsersIdAccountsPutRequest | 
+  users_id_accounts_put_request: PocketsmithRubyClient::UsersIdAccountsPutRequest.new({accounts: [PocketsmithRubyClient::Account.new]}) # UsersIdAccountsPutRequest | 
 }
 
 begin
   # Update the display order of accounts in user
   result = api_instance.users_id_accounts_put(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_put: #{e}"
 end
 ```
@@ -495,7 +495,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Account>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AccountsApi->users_id_accounts_put_with_http_info: #{e}"
 end
 ```

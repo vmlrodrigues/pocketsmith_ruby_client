@@ -1,4 +1,4 @@
-# OpenapiClient::SavedSearch
+# PocketsmithRubyClient::SavedSearch
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::SavedSearch.new(
+instance = PocketsmithRubyClient::SavedSearch.new(
   id: 42,
   title: Craft beer,
   created_at: 2015-08-16T02:17:02Z,

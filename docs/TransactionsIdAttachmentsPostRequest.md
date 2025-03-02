@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionsIdAttachmentsPostRequest
+# PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::TransactionsIdAttachmentsPostRequest.new(
+instance = PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest.new(
   attachment_id: 1438154
 )
 ```

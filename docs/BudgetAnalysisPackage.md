@@ -1,4 +1,4 @@
-# OpenapiClient::BudgetAnalysisPackage
+# PocketsmithRubyClient::BudgetAnalysisPackage
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::BudgetAnalysisPackage.new(
+instance = PocketsmithRubyClient::BudgetAnalysisPackage.new(
   category: null,
   is_transfer: false,
   expense: null,

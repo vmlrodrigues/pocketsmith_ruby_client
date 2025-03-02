@@ -1,4 +1,4 @@
-# OpenapiClient::Event
+# PocketsmithRubyClient::Event
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Event.new(
+instance = PocketsmithRubyClient::Event.new(
   id: 42-1601942400,
   category: null,
   scenario: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionsApi
+# PocketsmithRubyClient::TransactionsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -26,16 +26,16 @@ Lists transactions belonging to an account by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the account.
 opts = {
   start_date: '2016-11-01', # String | Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
@@ -52,7 +52,7 @@ begin
   # List transactions in account
   result = api_instance.accounts_id_transactions_get(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->accounts_id_transactions_get: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Transaction>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->accounts_id_transactions_get_with_http_info: #{e}"
 end
 ```
@@ -115,16 +115,16 @@ Lists transactions belonging to one or more categories by their IDs.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = '42,43' # String | A comma-separated list of category IDs.
 opts = {
   start_date: '2016-11-01', # String | Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
@@ -141,7 +141,7 @@ begin
   # List transactions in categories
   result = api_instance.categories_id_transactions_get(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->categories_id_transactions_get: #{e}"
 end
 ```
@@ -159,7 +159,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Transaction>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->categories_id_transactions_get_with_http_info: #{e}"
 end
 ```
@@ -204,16 +204,16 @@ Lists transactions belonging to a transaction account by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the transaction account.
 opts = {
   start_date: '2016-11-01', # String | Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
@@ -230,7 +230,7 @@ begin
   # List transactions in transaction account
   result = api_instance.transaction_accounts_id_transactions_get(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transaction_accounts_id_transactions_get: #{e}"
 end
 ```
@@ -248,7 +248,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Transaction>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transaction_accounts_id_transactions_get_with_http_info: #{e}"
 end
 ```
@@ -293,26 +293,26 @@ Creates a transaction in a transaction account by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the transaction account.
 opts = {
-  transaction_accounts_id_transactions_post_request: OpenapiClient::TransactionAccountsIdTransactionsPostRequest.new({payee: 'Tex Otago', amount: 11.5, date: '2018-02-27'}) # TransactionAccountsIdTransactionsPostRequest | 
+  transaction_accounts_id_transactions_post_request: PocketsmithRubyClient::TransactionAccountsIdTransactionsPostRequest.new({payee: 'Tex Otago', amount: 11.5, date: '2018-02-27'}) # TransactionAccountsIdTransactionsPostRequest | 
 }
 
 begin
   # Create a transaction in transaction account
   result = api_instance.transaction_accounts_id_transactions_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transaction_accounts_id_transactions_post: #{e}"
 end
 ```
@@ -330,7 +330,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Transaction>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transaction_accounts_id_transactions_post_with_http_info: #{e}"
 end
 ```
@@ -368,22 +368,22 @@ Deletes a transaction and all its data by ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the transaction.
 
 begin
   # Delete transaction
   api_instance.transactions_id_delete(id)
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_delete: #{e}"
 end
 ```
@@ -401,7 +401,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_delete_with_http_info: #{e}"
 end
 ```
@@ -438,23 +438,23 @@ Gets a transaction by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the transaction.
 
 begin
   # Get a transaction
   result = api_instance.transactions_id_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_get: #{e}"
 end
 ```
@@ -472,7 +472,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Transaction>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_get_with_http_info: #{e}"
 end
 ```
@@ -509,26 +509,26 @@ Updates a transaction by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the transaction.
 opts = {
-  transactions_id_put_request: OpenapiClient::TransactionsIdPutRequest.new # TransactionsIdPutRequest | 
+  transactions_id_put_request: PocketsmithRubyClient::TransactionsIdPutRequest.new # TransactionsIdPutRequest | 
 }
 
 begin
   # Update a transaction
   result = api_instance.transactions_id_put(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_put: #{e}"
 end
 ```
@@ -546,7 +546,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Transaction>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->transactions_id_put_with_http_info: #{e}"
 end
 ```
@@ -584,16 +584,16 @@ Lists transactions belonging to a user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TransactionsApi.new
+api_instance = PocketsmithRubyClient::TransactionsApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
   start_date: '2016-11-01', # String | Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
@@ -610,7 +610,7 @@ begin
   # List transactions in user
   result = api_instance.users_id_transactions_get(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->users_id_transactions_get: #{e}"
 end
 ```
@@ -628,7 +628,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Transaction>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling TransactionsApi->users_id_transactions_get_with_http_info: #{e}"
 end
 ```

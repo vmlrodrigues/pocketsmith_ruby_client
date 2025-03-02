@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionAccountsIdPutRequest
+# PocketsmithRubyClient::TransactionAccountsIdPutRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::TransactionAccountsIdPutRequest.new(
+instance = PocketsmithRubyClient::TransactionAccountsIdPutRequest.new(
   institution_id: 42,
   starting_balance: 3547.45,
   starting_balance_date: 2015-03-15

@@ -1,4 +1,4 @@
-# OpenapiClient::Error
+# PocketsmithRubyClient::Error
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Error.new(
+instance = PocketsmithRubyClient::Error.new(
   error: A message describing the error that occurred.
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::EventsIdPutRequest
+# PocketsmithRubyClient::EventsIdPutRequest
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::EventsIdPutRequest.new(
+instance = PocketsmithRubyClient::EventsIdPutRequest.new(
   behaviour: all,
   amount: 11.5,
   repeat_type: weekly,

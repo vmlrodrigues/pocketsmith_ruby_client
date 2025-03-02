@@ -1,4 +1,4 @@
-# OpenapiClient::Scenario
+# PocketsmithRubyClient::Scenario
 
 ## Properties
 
@@ -29,9 +29,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Scenario.new(
+instance = PocketsmithRubyClient::Scenario.new(
   id: 42,
   title: Wedding,
   description: null,

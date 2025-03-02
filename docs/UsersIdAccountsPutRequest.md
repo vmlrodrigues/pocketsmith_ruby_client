@@ -1,4 +1,4 @@
-# OpenapiClient::UsersIdAccountsPutRequest
+# PocketsmithRubyClient::UsersIdAccountsPutRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::UsersIdAccountsPutRequest.new(
+instance = PocketsmithRubyClient::UsersIdAccountsPutRequest.new(
   accounts: null
 )
 ```

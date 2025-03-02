@@ -1,4 +1,4 @@
-# OpenapiClient::Currency
+# PocketsmithRubyClient::Currency
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Currency.new(
+instance = PocketsmithRubyClient::Currency.new(
   id: nzd,
   name: New Zealand Dollar,
   minor_unit: 2,

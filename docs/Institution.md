@@ -1,4 +1,4 @@
-# OpenapiClient::Institution
+# PocketsmithRubyClient::Institution
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Institution.new(
+instance = PocketsmithRubyClient::Institution.new(
   currency_code: NZD,
   title: Bank of Foo,
   updated_at: 2015-04-21T22:42:22Z,

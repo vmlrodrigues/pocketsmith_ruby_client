@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionAccount
+# PocketsmithRubyClient::TransactionAccount
 
 ## Properties
 
@@ -24,9 +24,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::TransactionAccount.new(
+instance = PocketsmithRubyClient::TransactionAccount.new(
   id: 96027,
   name: Sample Credit,
   number: ASBCRD44554,

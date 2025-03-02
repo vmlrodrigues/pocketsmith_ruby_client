@@ -1,4 +1,4 @@
-# OpenapiClient::Category
+# PocketsmithRubyClient::Category
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Category.new(
+instance = PocketsmithRubyClient::Category.new(
   id: 1438154,
   title: Beer,
   colour: #00ff00,

@@ -1,4 +1,4 @@
-# OpenapiClient::UsersIdCategoriesPostRequest
+# PocketsmithRubyClient::UsersIdCategoriesPostRequest
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::UsersIdCategoriesPostRequest.new(
+instance = PocketsmithRubyClient::UsersIdCategoriesPostRequest.new(
   title: Food,
   colour: #e0e7ff,
   parent_id: 42,

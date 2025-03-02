@@ -1,4 +1,4 @@
-# OpenapiClient::CurrencySeparators
+# PocketsmithRubyClient::CurrencySeparators
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::CurrencySeparators.new(
+instance = PocketsmithRubyClient::CurrencySeparators.new(
   major: ,,
   minor: .
 )

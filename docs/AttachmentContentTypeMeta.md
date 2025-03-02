@@ -1,4 +1,4 @@
-# OpenapiClient::AttachmentContentTypeMeta
+# PocketsmithRubyClient::AttachmentContentTypeMeta
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::AttachmentContentTypeMeta.new(
+instance = PocketsmithRubyClient::AttachmentContentTypeMeta.new(
   title: PNG,
   description: PNG image,
   extension: png

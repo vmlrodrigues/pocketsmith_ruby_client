@@ -1,4 +1,4 @@
-# OpenapiClient::TimeZone
+# PocketsmithRubyClient::TimeZone
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::TimeZone.new(
+instance = PocketsmithRubyClient::TimeZone.new(
   name: Auckland,
   utc_offset: 46800,
   formatted_name: (GMT+13:00) Auckland,

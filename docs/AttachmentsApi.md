@@ -1,4 +1,4 @@
-# OpenapiClient::AttachmentsApi
+# PocketsmithRubyClient::AttachmentsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -26,22 +26,22 @@ Deletes a particular attachment by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the attachment.
 
 begin
   # Delete attachment
   api_instance.attachments_id_delete(id)
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_delete: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_delete_with_http_info: #{e}"
 end
 ```
@@ -96,23 +96,23 @@ Gets a particular attachment by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the attachment.
 
 begin
   # Get attachment
   result = api_instance.attachments_id_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_get: #{e}"
 end
 ```
@@ -130,7 +130,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Attachment>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_get_with_http_info: #{e}"
 end
 ```
@@ -167,26 +167,26 @@ Updates the title of the attachment.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the attachment.
 opts = {
-  attachments_id_put_request: OpenapiClient::AttachmentsIdPutRequest.new # AttachmentsIdPutRequest | 
+  attachments_id_put_request: PocketsmithRubyClient::AttachmentsIdPutRequest.new # AttachmentsIdPutRequest | 
 }
 
 begin
   # Update attachment
   result = api_instance.attachments_id_put(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_put: #{e}"
 end
 ```
@@ -204,7 +204,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Attachment>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->attachments_id_put_with_http_info: #{e}"
 end
 ```
@@ -242,23 +242,23 @@ Lists attachments belonging to a transaction by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the transaction.
 
 begin
   # List attachments in transaction
   result = api_instance.transactions_id_attachments_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_id_attachments_get: #{e}"
 end
 ```
@@ -276,7 +276,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Attachment>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_id_attachments_get_with_http_info: #{e}"
 end
 ```
@@ -313,26 +313,26 @@ Assigns an attachment to the transaction by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the transaction.
 opts = {
-  transactions_id_attachments_post_request: OpenapiClient::TransactionsIdAttachmentsPostRequest.new # TransactionsIdAttachmentsPostRequest | 
+  transactions_id_attachments_post_request: PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest.new # TransactionsIdAttachmentsPostRequest | 
 }
 
 begin
   # Assigns attachment to transaction
   result = api_instance.transactions_id_attachments_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_id_attachments_post: #{e}"
 end
 ```
@@ -350,7 +350,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Attachment>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_id_attachments_post_with_http_info: #{e}"
 end
 ```
@@ -388,23 +388,23 @@ Unassigns a particular attachment by its ID from the transaction ID. This does n
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 transaction_id = 42 # Integer | The unique identifier of the transaction.
 attachment_id = 1438154 # Integer | The unique identifier of the attachment.
 
 begin
   # Unassigns attachment in transaction
   api_instance.transactions_transaction_id_attachments_attachment_id_delete(transaction_id, attachment_id)
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_transaction_id_attachments_attachment_id_delete: #{e}"
 end
 ```
@@ -422,7 +422,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->transactions_transaction_id_attachments_attachment_id_delete_with_http_info: #{e}"
 end
 ```
@@ -460,16 +460,16 @@ Lists attachments belonging to a user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
   unassigned: 1 # Integer | If set, returns unassigned attachments, that are available for assigning to a transaction.
@@ -479,7 +479,7 @@ begin
   # Lists attachments in user
   result = api_instance.users_id_attachments_get(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->users_id_attachments_get: #{e}"
 end
 ```
@@ -497,7 +497,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Attachment>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->users_id_attachments_get_with_http_info: #{e}"
 end
 ```
@@ -535,26 +535,26 @@ Creates an attachment belonging to the user by their ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AttachmentsApi.new
+api_instance = PocketsmithRubyClient::AttachmentsApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
-  users_id_attachments_post_request: OpenapiClient::UsersIdAttachmentsPostRequest.new # UsersIdAttachmentsPostRequest | 
+  users_id_attachments_post_request: PocketsmithRubyClient::UsersIdAttachmentsPostRequest.new # UsersIdAttachmentsPostRequest | 
 }
 
 begin
   # Create attachment in user
   result = api_instance.users_id_attachments_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->users_id_attachments_post: #{e}"
 end
 ```
@@ -572,7 +572,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Attachment>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling AttachmentsApi->users_id_attachments_post_with_http_info: #{e}"
 end
 ```

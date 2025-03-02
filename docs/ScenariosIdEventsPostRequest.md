@@ -1,4 +1,4 @@
-# OpenapiClient::ScenariosIdEventsPostRequest
+# PocketsmithRubyClient::ScenariosIdEventsPostRequest
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::ScenariosIdEventsPostRequest.new(
+instance = PocketsmithRubyClient::ScenariosIdEventsPostRequest.new(
   category_id: 42,
   date: 2020-10-27,
   amount: 11.5,

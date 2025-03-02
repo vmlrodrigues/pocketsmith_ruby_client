@@ -1,4 +1,4 @@
-# OpenapiClient::Period
+# PocketsmithRubyClient::Period
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::Period.new(
+instance = PocketsmithRubyClient::Period.new(
   start_date: 2016-11-01,
   end_date: 2016-11-30,
   currency_code: nzd,

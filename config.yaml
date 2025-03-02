@@ -1,0 +1,9 @@
+gemName: pocketsmith_ruby_client
+gemVersion: 1.0.0
+gemSummary: Pocketsmith API Ruby Gem
+gemDescription: This gem was generated from the PocketSmith OpenAPI 3 schema based at https://github.com/pocketsmith/api
+gemAuthor: Victor Rodrigues
+gemAuthorEmail: vmlrodrigues@jeunj.com
+gemHomepage: https://github.com/vmlrodrigues/pocketsmith_ruby_client.git
+gemLicense: MIT
+gemRequiredRubyVersion: '>= 2.5'

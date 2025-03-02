@@ -1,4 +1,4 @@
-# OpenapiClient::CurrenciesApi
+# PocketsmithRubyClient::CurrenciesApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -20,22 +20,22 @@ Lists currencies supported by PocketSmith.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CurrenciesApi.new
+api_instance = PocketsmithRubyClient::CurrenciesApi.new
 
 begin
   # List currencies
   result = api_instance.currencies_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CurrenciesApi->currencies_get: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Currency>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CurrenciesApi->currencies_get_with_http_info: #{e}"
 end
 ```
@@ -88,23 +88,23 @@ Gets a particular currency by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CurrenciesApi.new
+api_instance = PocketsmithRubyClient::CurrenciesApi.new
 id = 'nzd' # String | The unique identifier of the currency.
 
 begin
   # Get currency
   result = api_instance.currencies_id_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CurrenciesApi->currencies_id_get: #{e}"
 end
 ```
@@ -122,7 +122,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Currency>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling CurrenciesApi->currencies_id_get_with_http_info: #{e}"
 end
 ```

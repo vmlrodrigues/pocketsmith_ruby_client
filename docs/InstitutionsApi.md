@@ -1,4 +1,4 @@
-# OpenapiClient::InstitutionsApi
+# PocketsmithRubyClient::InstitutionsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -23,16 +23,16 @@ Deletes an institution and all data within. Alternatively, another institution c
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::InstitutionsApi.new
+api_instance = PocketsmithRubyClient::InstitutionsApi.new
 id = 42 # Integer | The unique identifier of the institution.
 opts = {
   merge_into_institution_id: 44 # Integer | The unique identifier of the institution to merge into.
@@ -41,7 +41,7 @@ opts = {
 begin
   # Delete institution
   api_instance.institutions_id_delete(id, opts)
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_delete: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_delete_with_http_info: #{e}"
 end
 ```
@@ -97,23 +97,23 @@ Gets an institution by its ID.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::InstitutionsApi.new
+api_instance = PocketsmithRubyClient::InstitutionsApi.new
 id = 42 # Integer | The unique identifier of the institution.
 
 begin
   # Get institution
   result = api_instance.institutions_id_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_get: #{e}"
 end
 ```
@@ -131,7 +131,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Institution>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_get_with_http_info: #{e}"
 end
 ```
@@ -168,26 +168,26 @@ Updates the title and currency code for an institution.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::InstitutionsApi.new
+api_instance = PocketsmithRubyClient::InstitutionsApi.new
 id = 42 # Integer | The unique identifier of the institution.
 opts = {
-  institutions_id_put_request: OpenapiClient::InstitutionsIdPutRequest.new # InstitutionsIdPutRequest | 
+  institutions_id_put_request: PocketsmithRubyClient::InstitutionsIdPutRequest.new # InstitutionsIdPutRequest | 
 }
 
 begin
   # Update institution
   result = api_instance.institutions_id_put(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_put: #{e}"
 end
 ```
@@ -205,7 +205,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Institution>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->institutions_id_put_with_http_info: #{e}"
 end
 ```
@@ -243,23 +243,23 @@ Lists all the institutions belonging to the user.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::InstitutionsApi.new
+api_instance = PocketsmithRubyClient::InstitutionsApi.new
 id = 42 # Integer | The unique identifier of the user
 
 begin
   # List institutions in user
   result = api_instance.users_id_institutions_get(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->users_id_institutions_get: #{e}"
 end
 ```
@@ -277,7 +277,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Institution>>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->users_id_institutions_get_with_http_info: #{e}"
 end
 ```
@@ -314,26 +314,26 @@ Creates an institution belonging to a user.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PocketsmithRubyClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::InstitutionsApi.new
+api_instance = PocketsmithRubyClient::InstitutionsApi.new
 id = 42 # Integer | The unique identifier of the user
 opts = {
-  users_id_institutions_post_request: OpenapiClient::UsersIdInstitutionsPostRequest.new({title: 'Bank of Foo', currency_code: 'NZD'}) # UsersIdInstitutionsPostRequest | 
+  users_id_institutions_post_request: PocketsmithRubyClient::UsersIdInstitutionsPostRequest.new({title: 'Bank of Foo', currency_code: 'NZD'}) # UsersIdInstitutionsPostRequest | 
 }
 
 begin
   # Create institution in user
   result = api_instance.users_id_institutions_post(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->users_id_institutions_post: #{e}"
 end
 ```
@@ -351,7 +351,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Institution>
-rescue OpenapiClient::ApiError => e
+rescue PocketsmithRubyClient::ApiError => e
   puts "Error when calling InstitutionsApi->users_id_institutions_post_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::User
+# PocketsmithRubyClient::User
 
 ## Properties
 
@@ -32,9 +32,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pocketsmith_ruby_client'
 
-instance = OpenapiClient::User.new(
+instance = PocketsmithRubyClient::User.new(
   id: 42,
   login: sampleuser69,
   name: Foo Barrington,

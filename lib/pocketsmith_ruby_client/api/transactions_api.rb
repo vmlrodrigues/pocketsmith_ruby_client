@@ -30,11 +30,29 @@ module PocketsmithClient
     # @option opts [String] :type Limit to transactions of this type.
     # @option opts [Integer] :needs_review Limit to transactions that need to be reviewed.
     # @option opts [String] :search Limit to transactions matching a keyword search string. The provided string is matched against the transaction amount, account name, payee, category title, note, labels, and the date in ISO 8601 format.
-    # @option opts [Integer] :page Choose a particular page of the results.
     # @return [Array<Transaction>]
     def accounts_id_transactions_get(id, opts = {})
-      data, _status_code, _headers = accounts_id_transactions_get_with_http_info(id, opts)
-      data
+      all_transactions = []
+      current_page = 1
+      
+      loop do
+        begin
+          page_opts = opts.merge(page: current_page)
+          data, _status_code, _headers = accounts_id_transactions_get_with_http_info(id, page_opts)
+          
+          break if data.empty?
+          
+          all_transactions.concat(data)
+          current_page += 1
+        rescue => e
+          # Break the loop if we get an "out of bounds" error, which means we've reached the end
+          break if e.message.include?("out of bounds")
+          # Re-raise any other errors
+          raise e
+        end
+      end
+      
+      all_transactions
     end
 
     # List transactions in account

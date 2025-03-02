@@ -11,5 +11,5 @@ Generator version: 7.12.0
 =end
 
 module PocketsmithClient
-  VERSION = '1.0.0'
+  VERSION = '1.1.0'
 end

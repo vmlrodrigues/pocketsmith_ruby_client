@@ -10,6 +10,6 @@ Generator version: 7.12.0
 
 =end
 
-module PocketsmithRubyClient
+module PocketsmithClient
   VERSION = '1.0.0'
 end

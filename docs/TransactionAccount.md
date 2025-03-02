@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionAccount
+# PocketsmithClient::TransactionAccount
 
 ## Properties
 
@@ -26,7 +26,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TransactionAccount.new(
+instance = PocketsmithClient::TransactionAccount.new(
   id: 96027,
   name: Sample Credit,
   number: ASBCRD44554,

@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::CurrencySeparators
+# PocketsmithClient::CurrencySeparators
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::CurrencySeparators.new(
+instance = PocketsmithClient::CurrencySeparators.new(
   major: ,,
   minor: .
 )

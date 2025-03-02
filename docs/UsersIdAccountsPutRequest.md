@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersIdAccountsPutRequest
+# PocketsmithClient::UsersIdAccountsPutRequest
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::UsersIdAccountsPutRequest.new(
+instance = PocketsmithClient::UsersIdAccountsPutRequest.new(
   accounts: null
 )
 ```

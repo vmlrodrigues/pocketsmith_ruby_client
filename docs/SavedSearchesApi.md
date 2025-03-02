@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::SavedSearchesApi
+# PocketsmithClient::SavedSearchesApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -21,21 +21,21 @@ Lists saved searches belonging to a user by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::SavedSearchesApi.new
+api_instance = PocketsmithClient::SavedSearchesApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List saved searches in user
   result = api_instance.users_id_saved_searches_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling SavedSearchesApi->users_id_saved_searches_get: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SavedSearch>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling SavedSearchesApi->users_id_saved_searches_get_with_http_info: #{e}"
 end
 ```

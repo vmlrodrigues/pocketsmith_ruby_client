@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionAccountsIdPutRequest
+# PocketsmithClient::TransactionAccountsIdPutRequest
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TransactionAccountsIdPutRequest.new(
+instance = PocketsmithClient::TransactionAccountsIdPutRequest.new(
   institution_id: 42,
   starting_balance: 3547.45,
   starting_balance_date: 2015-03-15

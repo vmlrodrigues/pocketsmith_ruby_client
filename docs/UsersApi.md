@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersApi
+# PocketsmithClient::UsersApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -23,20 +23,20 @@ Gets the user that corresponds to the access token used in the request.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::UsersApi.new
+api_instance = PocketsmithClient::UsersApi.new
 
 begin
   # Get the authorised user
   result = api_instance.me_get
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->me_get: #{e}"
 end
 ```
@@ -54,7 +54,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <User>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->me_get_with_http_info: #{e}"
 end
 ```
@@ -91,21 +91,21 @@ Gets a user by ID. You must be authorised as the target user in order to make th
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::UsersApi.new
+api_instance = PocketsmithClient::UsersApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # Get user
   result = api_instance.users_id_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->users_id_get: #{e}"
 end
 ```
@@ -123,7 +123,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <User>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->users_id_get_with_http_info: #{e}"
 end
 ```
@@ -162,24 +162,24 @@ Updates the user by their ID. You must be authorised as the target user in order
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::UsersApi.new
+api_instance = PocketsmithClient::UsersApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
-  users_id_put_request: PocketsmithRubyClient::UsersIdPutRequest.new # UsersIdPutRequest | 
+  users_id_put_request: PocketsmithClient::UsersIdPutRequest.new # UsersIdPutRequest | 
 }
 
 begin
   # Update user
   result = api_instance.users_id_put(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->users_id_put: #{e}"
 end
 ```
@@ -197,7 +197,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <User>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling UsersApi->users_id_put_with_http_info: #{e}"
 end
 ```

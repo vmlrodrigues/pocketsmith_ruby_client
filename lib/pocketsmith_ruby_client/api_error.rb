@@ -10,7 +10,7 @@ Generator version: 7.12.0
 
 =end
 
-module PocketsmithRubyClient
+module PocketsmithClient
   class ApiError < StandardError
     attr_reader :code, :response_headers, :response_body
 

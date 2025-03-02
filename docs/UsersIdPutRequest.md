@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersIdPutRequest
+# PocketsmithClient::UsersIdPutRequest
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::UsersIdPutRequest.new(
+instance = PocketsmithClient::UsersIdPutRequest.new(
   email: foo@bar.com,
   name: John Appleseed,
   time_zone: Auckland,

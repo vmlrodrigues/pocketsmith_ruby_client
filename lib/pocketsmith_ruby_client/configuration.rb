@@ -10,7 +10,7 @@ Generator version: 7.12.0
 
 =end
 
-module PocketsmithRubyClient
+module PocketsmithClient
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

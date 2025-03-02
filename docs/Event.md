@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Event
+# PocketsmithClient::Event
 
 ## Properties
 
@@ -24,7 +24,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Event.new(
+instance = PocketsmithClient::Event.new(
   id: 42-1601942400,
   category: null,
   scenario: null,

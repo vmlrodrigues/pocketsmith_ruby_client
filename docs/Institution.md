@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Institution
+# PocketsmithClient::Institution
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Institution.new(
+instance = PocketsmithClient::Institution.new(
   currency_code: NZD,
   title: Bank of Foo,
   updated_at: 2015-04-21T22:42:22Z,

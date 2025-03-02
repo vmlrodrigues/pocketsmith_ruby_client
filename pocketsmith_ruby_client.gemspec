@@ -17,7 +17,7 @@ require "pocketsmith_ruby_client/version"
 
 Gem::Specification.new do |s|
   s.name        = "pocketsmith_ruby_client"
-  s.version     = PocketsmithRubyClient::VERSION
+  s.version     = PocketsmithClient::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Victor Rodrigues"]
   s.email       = ["vmlrodrigues@jeunj.com"]

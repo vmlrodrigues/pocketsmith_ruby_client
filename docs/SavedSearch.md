@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::SavedSearch
+# PocketsmithClient::SavedSearch
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::SavedSearch.new(
+instance = PocketsmithClient::SavedSearch.new(
   id: 42,
   title: Craft beer,
   created_at: 2015-08-16T02:17:02Z,

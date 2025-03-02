@@ -7,3 +7,4 @@ gemAuthorEmail: vmlrodrigues@jeunj.com
 gemHomepage: https://github.com/vmlrodrigues/pocketsmith_ruby_client.git
 gemLicense: MIT
 gemRequiredRubyVersion: '>= 2.5'
+moduleName: PocketsmithClient

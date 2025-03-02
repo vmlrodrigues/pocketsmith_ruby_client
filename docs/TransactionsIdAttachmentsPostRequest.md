@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest
+# PocketsmithClient::TransactionsIdAttachmentsPostRequest
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest.new(
+instance = PocketsmithClient::TransactionsIdAttachmentsPostRequest.new(
   attachment_id: 1438154
 )
 ```

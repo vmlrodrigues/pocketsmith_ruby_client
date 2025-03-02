@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersIdAttachmentsPostRequest
+# PocketsmithClient::UsersIdAttachmentsPostRequest
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::UsersIdAttachmentsPostRequest.new(
+instance = PocketsmithClient::UsersIdAttachmentsPostRequest.new(
   title: Invoice for taxi,
   file_name: taxi.png,
   file_data: null

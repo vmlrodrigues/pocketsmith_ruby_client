@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::BudgetAnalysisPackage
+# PocketsmithClient::BudgetAnalysisPackage
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::BudgetAnalysisPackage.new(
+instance = PocketsmithClient::BudgetAnalysisPackage.new(
   category: null,
   is_transfer: false,
   expense: null,

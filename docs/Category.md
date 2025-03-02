@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Category
+# PocketsmithClient::Category
 
 ## Properties
 
@@ -21,7 +21,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Category.new(
+instance = PocketsmithClient::Category.new(
   id: 1438154,
   title: Beer,
   colour: #00ff00,

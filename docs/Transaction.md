@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Transaction
+# PocketsmithClient::Transaction
 
 ## Properties
 
@@ -30,7 +30,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Transaction.new(
+instance = PocketsmithClient::Transaction.new(
   cheque_number: 503113643691,
   type: credit,
   memo: An example memo,

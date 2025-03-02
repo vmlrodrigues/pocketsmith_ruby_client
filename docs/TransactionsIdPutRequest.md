@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionsIdPutRequest
+# PocketsmithClient::TransactionsIdPutRequest
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TransactionsIdPutRequest.new(
+instance = PocketsmithClient::TransactionsIdPutRequest.new(
   memo: Rent,
   cheque_number: 503113643691,
   payee: Bill,

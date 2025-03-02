@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TimeZone
+# PocketsmithClient::TimeZone
 
 ## Properties
 
@@ -16,7 +16,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TimeZone.new(
+instance = PocketsmithClient::TimeZone.new(
   name: Auckland,
   utc_offset: 46800,
   formatted_name: (GMT+13:00) Auckland,

@@ -1,6 +1,6 @@
 # pocketsmith_ruby_client
 
-PocketsmithRubyClient - the Ruby gem for the PocketSmith
+PocketsmithClient - the Ruby gem for the PocketSmith
 
 The PocketSmith API
 
@@ -58,20 +58,20 @@ Please follow the [installation](#installation) procedure and then run the follo
 require 'pocketsmith_ruby_client'
 
 # Setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::AccountsApi.new
+api_instance = PocketsmithClient::AccountsApi.new
 id = 42 # Integer | The unique identifier of the account.
 
 begin
   #Delete account
   api_instance.accounts_id_delete(id)
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_id_delete: #{e}"
 end
 
@@ -83,103 +83,103 @@ All URIs are relative to *https://api.pocketsmith.com/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*PocketsmithRubyClient::AccountsApi* | [**accounts_id_delete**](docs/AccountsApi.md#accounts_id_delete) | **DELETE** /accounts/{id} | Delete account
-*PocketsmithRubyClient::AccountsApi* | [**accounts_id_get**](docs/AccountsApi.md#accounts_id_get) | **GET** /accounts/{id} | Get account
-*PocketsmithRubyClient::AccountsApi* | [**accounts_id_put**](docs/AccountsApi.md#accounts_id_put) | **PUT** /accounts/{id} | Update account
-*PocketsmithRubyClient::AccountsApi* | [**institutions_id_accounts_get**](docs/AccountsApi.md#institutions_id_accounts_get) | **GET** /institutions/{id}/accounts | List accounts in institution
-*PocketsmithRubyClient::AccountsApi* | [**users_id_accounts_get**](docs/AccountsApi.md#users_id_accounts_get) | **GET** /users/{id}/accounts | List accounts in user
-*PocketsmithRubyClient::AccountsApi* | [**users_id_accounts_post**](docs/AccountsApi.md#users_id_accounts_post) | **POST** /users/{id}/accounts | Create an account in user
-*PocketsmithRubyClient::AccountsApi* | [**users_id_accounts_put**](docs/AccountsApi.md#users_id_accounts_put) | **PUT** /users/{id}/accounts | Update the display order of accounts in user
-*PocketsmithRubyClient::AttachmentsApi* | [**attachments_id_delete**](docs/AttachmentsApi.md#attachments_id_delete) | **DELETE** /attachments/{id} | Delete attachment
-*PocketsmithRubyClient::AttachmentsApi* | [**attachments_id_get**](docs/AttachmentsApi.md#attachments_id_get) | **GET** /attachments/{id} | Get attachment
-*PocketsmithRubyClient::AttachmentsApi* | [**attachments_id_put**](docs/AttachmentsApi.md#attachments_id_put) | **PUT** /attachments/{id} | Update attachment
-*PocketsmithRubyClient::AttachmentsApi* | [**transactions_id_attachments_get**](docs/AttachmentsApi.md#transactions_id_attachments_get) | **GET** /transactions/{id}/attachments | List attachments in transaction
-*PocketsmithRubyClient::AttachmentsApi* | [**transactions_id_attachments_post**](docs/AttachmentsApi.md#transactions_id_attachments_post) | **POST** /transactions/{id}/attachments | Assigns attachment to transaction
-*PocketsmithRubyClient::AttachmentsApi* | [**transactions_transaction_id_attachments_attachment_id_delete**](docs/AttachmentsApi.md#transactions_transaction_id_attachments_attachment_id_delete) | **DELETE** /transactions/{transaction_id}/attachments/{attachment_id} | Unassigns attachment in transaction
-*PocketsmithRubyClient::AttachmentsApi* | [**users_id_attachments_get**](docs/AttachmentsApi.md#users_id_attachments_get) | **GET** /users/{id}/attachments | Lists attachments in user
-*PocketsmithRubyClient::AttachmentsApi* | [**users_id_attachments_post**](docs/AttachmentsApi.md#users_id_attachments_post) | **POST** /users/{id}/attachments | Create attachment in user
-*PocketsmithRubyClient::BudgetingApi* | [**users_id_budget_get**](docs/BudgetingApi.md#users_id_budget_get) | **GET** /users/{id}/budget | List budget for user
-*PocketsmithRubyClient::BudgetingApi* | [**users_id_budget_summary_get**](docs/BudgetingApi.md#users_id_budget_summary_get) | **GET** /users/{id}/budget_summary | Get budget summary for user
-*PocketsmithRubyClient::BudgetingApi* | [**users_id_forecast_cache_delete**](docs/BudgetingApi.md#users_id_forecast_cache_delete) | **DELETE** /users/{id}/forecast_cache | Delete forecast cache for user
-*PocketsmithRubyClient::BudgetingApi* | [**users_id_trend_analysis_get**](docs/BudgetingApi.md#users_id_trend_analysis_get) | **GET** /users/{id}/trend_analysis | Get trend analysis for user
-*PocketsmithRubyClient::CategoriesApi* | [**categories_id_delete**](docs/CategoriesApi.md#categories_id_delete) | **DELETE** /categories/{id} | Delete category
-*PocketsmithRubyClient::CategoriesApi* | [**categories_id_get**](docs/CategoriesApi.md#categories_id_get) | **GET** /categories/{id} | Get category
-*PocketsmithRubyClient::CategoriesApi* | [**categories_id_put**](docs/CategoriesApi.md#categories_id_put) | **PUT** /categories/{id} | Update category
-*PocketsmithRubyClient::CategoriesApi* | [**users_id_categories_get**](docs/CategoriesApi.md#users_id_categories_get) | **GET** /users/{id}/categories | List categories in user
-*PocketsmithRubyClient::CategoriesApi* | [**users_id_categories_post**](docs/CategoriesApi.md#users_id_categories_post) | **POST** /users/{id}/categories | Create category in user
-*PocketsmithRubyClient::CategoryRulesApi* | [**categories_id_category_rules_post**](docs/CategoryRulesApi.md#categories_id_category_rules_post) | **POST** /categories/{id}/category_rules | Create category rule in category
-*PocketsmithRubyClient::CategoryRulesApi* | [**users_id_category_rules_get**](docs/CategoryRulesApi.md#users_id_category_rules_get) | **GET** /users/{id}/category_rules | List category rules in user
-*PocketsmithRubyClient::CurrenciesApi* | [**currencies_get**](docs/CurrenciesApi.md#currencies_get) | **GET** /currencies | List currencies
-*PocketsmithRubyClient::CurrenciesApi* | [**currencies_id_get**](docs/CurrenciesApi.md#currencies_id_get) | **GET** /currencies/{id} | Get currency
-*PocketsmithRubyClient::EventsApi* | [**events_id_delete**](docs/EventsApi.md#events_id_delete) | **DELETE** /events/{id} | Delete event
-*PocketsmithRubyClient::EventsApi* | [**events_id_get**](docs/EventsApi.md#events_id_get) | **GET** /events/{id} | Get event
-*PocketsmithRubyClient::EventsApi* | [**events_id_put**](docs/EventsApi.md#events_id_put) | **PUT** /events/{id} | Update event
-*PocketsmithRubyClient::EventsApi* | [**scenarios_id_events_get**](docs/EventsApi.md#scenarios_id_events_get) | **GET** /scenarios/{id}/events | List events in scenario.
-*PocketsmithRubyClient::EventsApi* | [**scenarios_id_events_post**](docs/EventsApi.md#scenarios_id_events_post) | **POST** /scenarios/{id}/events | Create event in scenario
-*PocketsmithRubyClient::EventsApi* | [**users_id_events_get**](docs/EventsApi.md#users_id_events_get) | **GET** /users/{id}/events | List events in user.
-*PocketsmithRubyClient::InstitutionsApi* | [**institutions_id_delete**](docs/InstitutionsApi.md#institutions_id_delete) | **DELETE** /institutions/{id} | Delete institution
-*PocketsmithRubyClient::InstitutionsApi* | [**institutions_id_get**](docs/InstitutionsApi.md#institutions_id_get) | **GET** /institutions/{id} | Get institution
-*PocketsmithRubyClient::InstitutionsApi* | [**institutions_id_put**](docs/InstitutionsApi.md#institutions_id_put) | **PUT** /institutions/{id} | Update institution
-*PocketsmithRubyClient::InstitutionsApi* | [**users_id_institutions_get**](docs/InstitutionsApi.md#users_id_institutions_get) | **GET** /users/{id}/institutions | List institutions in user
-*PocketsmithRubyClient::InstitutionsApi* | [**users_id_institutions_post**](docs/InstitutionsApi.md#users_id_institutions_post) | **POST** /users/{id}/institutions | Create institution in user
-*PocketsmithRubyClient::LabelsApi* | [**users_id_labels_get**](docs/LabelsApi.md#users_id_labels_get) | **GET** /users/{id}/labels | List labels in user
-*PocketsmithRubyClient::SavedSearchesApi* | [**users_id_saved_searches_get**](docs/SavedSearchesApi.md#users_id_saved_searches_get) | **GET** /users/{id}/saved_searches | List saved searches in user
-*PocketsmithRubyClient::TimeZonesApi* | [**time_zones_get**](docs/TimeZonesApi.md#time_zones_get) | **GET** /time_zones | List time zones
-*PocketsmithRubyClient::TransactionAccountsApi* | [**transaction_accounts_id_get**](docs/TransactionAccountsApi.md#transaction_accounts_id_get) | **GET** /transaction_accounts/{id} | Get transaction account
-*PocketsmithRubyClient::TransactionAccountsApi* | [**transaction_accounts_id_put**](docs/TransactionAccountsApi.md#transaction_accounts_id_put) | **PUT** /transaction_accounts/{id} | Update transaction account
-*PocketsmithRubyClient::TransactionAccountsApi* | [**users_id_transaction_accounts_get**](docs/TransactionAccountsApi.md#users_id_transaction_accounts_get) | **GET** /users/{id}/transaction_accounts | List transaction accounts in user
-*PocketsmithRubyClient::TransactionsApi* | [**accounts_id_transactions_get**](docs/TransactionsApi.md#accounts_id_transactions_get) | **GET** /accounts/{id}/transactions | List transactions in account
-*PocketsmithRubyClient::TransactionsApi* | [**categories_id_transactions_get**](docs/TransactionsApi.md#categories_id_transactions_get) | **GET** /categories/{id}/transactions | List transactions in categories
-*PocketsmithRubyClient::TransactionsApi* | [**transaction_accounts_id_transactions_get**](docs/TransactionsApi.md#transaction_accounts_id_transactions_get) | **GET** /transaction_accounts/{id}/transactions | List transactions in transaction account
-*PocketsmithRubyClient::TransactionsApi* | [**transaction_accounts_id_transactions_post**](docs/TransactionsApi.md#transaction_accounts_id_transactions_post) | **POST** /transaction_accounts/{id}/transactions | Create a transaction in transaction account
-*PocketsmithRubyClient::TransactionsApi* | [**transactions_id_delete**](docs/TransactionsApi.md#transactions_id_delete) | **DELETE** /transactions/{id} | Delete transaction
-*PocketsmithRubyClient::TransactionsApi* | [**transactions_id_get**](docs/TransactionsApi.md#transactions_id_get) | **GET** /transactions/{id} | Get a transaction
-*PocketsmithRubyClient::TransactionsApi* | [**transactions_id_put**](docs/TransactionsApi.md#transactions_id_put) | **PUT** /transactions/{id} | Update a transaction
-*PocketsmithRubyClient::TransactionsApi* | [**users_id_transactions_get**](docs/TransactionsApi.md#users_id_transactions_get) | **GET** /users/{id}/transactions | List transactions in user
-*PocketsmithRubyClient::UsersApi* | [**me_get**](docs/UsersApi.md#me_get) | **GET** /me | Get the authorised user
-*PocketsmithRubyClient::UsersApi* | [**users_id_get**](docs/UsersApi.md#users_id_get) | **GET** /users/{id} | Get user
-*PocketsmithRubyClient::UsersApi* | [**users_id_put**](docs/UsersApi.md#users_id_put) | **PUT** /users/{id} | Update user
+*PocketsmithClient::AccountsApi* | [**accounts_id_delete**](docs/AccountsApi.md#accounts_id_delete) | **DELETE** /accounts/{id} | Delete account
+*PocketsmithClient::AccountsApi* | [**accounts_id_get**](docs/AccountsApi.md#accounts_id_get) | **GET** /accounts/{id} | Get account
+*PocketsmithClient::AccountsApi* | [**accounts_id_put**](docs/AccountsApi.md#accounts_id_put) | **PUT** /accounts/{id} | Update account
+*PocketsmithClient::AccountsApi* | [**institutions_id_accounts_get**](docs/AccountsApi.md#institutions_id_accounts_get) | **GET** /institutions/{id}/accounts | List accounts in institution
+*PocketsmithClient::AccountsApi* | [**users_id_accounts_get**](docs/AccountsApi.md#users_id_accounts_get) | **GET** /users/{id}/accounts | List accounts in user
+*PocketsmithClient::AccountsApi* | [**users_id_accounts_post**](docs/AccountsApi.md#users_id_accounts_post) | **POST** /users/{id}/accounts | Create an account in user
+*PocketsmithClient::AccountsApi* | [**users_id_accounts_put**](docs/AccountsApi.md#users_id_accounts_put) | **PUT** /users/{id}/accounts | Update the display order of accounts in user
+*PocketsmithClient::AttachmentsApi* | [**attachments_id_delete**](docs/AttachmentsApi.md#attachments_id_delete) | **DELETE** /attachments/{id} | Delete attachment
+*PocketsmithClient::AttachmentsApi* | [**attachments_id_get**](docs/AttachmentsApi.md#attachments_id_get) | **GET** /attachments/{id} | Get attachment
+*PocketsmithClient::AttachmentsApi* | [**attachments_id_put**](docs/AttachmentsApi.md#attachments_id_put) | **PUT** /attachments/{id} | Update attachment
+*PocketsmithClient::AttachmentsApi* | [**transactions_id_attachments_get**](docs/AttachmentsApi.md#transactions_id_attachments_get) | **GET** /transactions/{id}/attachments | List attachments in transaction
+*PocketsmithClient::AttachmentsApi* | [**transactions_id_attachments_post**](docs/AttachmentsApi.md#transactions_id_attachments_post) | **POST** /transactions/{id}/attachments | Assigns attachment to transaction
+*PocketsmithClient::AttachmentsApi* | [**transactions_transaction_id_attachments_attachment_id_delete**](docs/AttachmentsApi.md#transactions_transaction_id_attachments_attachment_id_delete) | **DELETE** /transactions/{transaction_id}/attachments/{attachment_id} | Unassigns attachment in transaction
+*PocketsmithClient::AttachmentsApi* | [**users_id_attachments_get**](docs/AttachmentsApi.md#users_id_attachments_get) | **GET** /users/{id}/attachments | Lists attachments in user
+*PocketsmithClient::AttachmentsApi* | [**users_id_attachments_post**](docs/AttachmentsApi.md#users_id_attachments_post) | **POST** /users/{id}/attachments | Create attachment in user
+*PocketsmithClient::BudgetingApi* | [**users_id_budget_get**](docs/BudgetingApi.md#users_id_budget_get) | **GET** /users/{id}/budget | List budget for user
+*PocketsmithClient::BudgetingApi* | [**users_id_budget_summary_get**](docs/BudgetingApi.md#users_id_budget_summary_get) | **GET** /users/{id}/budget_summary | Get budget summary for user
+*PocketsmithClient::BudgetingApi* | [**users_id_forecast_cache_delete**](docs/BudgetingApi.md#users_id_forecast_cache_delete) | **DELETE** /users/{id}/forecast_cache | Delete forecast cache for user
+*PocketsmithClient::BudgetingApi* | [**users_id_trend_analysis_get**](docs/BudgetingApi.md#users_id_trend_analysis_get) | **GET** /users/{id}/trend_analysis | Get trend analysis for user
+*PocketsmithClient::CategoriesApi* | [**categories_id_delete**](docs/CategoriesApi.md#categories_id_delete) | **DELETE** /categories/{id} | Delete category
+*PocketsmithClient::CategoriesApi* | [**categories_id_get**](docs/CategoriesApi.md#categories_id_get) | **GET** /categories/{id} | Get category
+*PocketsmithClient::CategoriesApi* | [**categories_id_put**](docs/CategoriesApi.md#categories_id_put) | **PUT** /categories/{id} | Update category
+*PocketsmithClient::CategoriesApi* | [**users_id_categories_get**](docs/CategoriesApi.md#users_id_categories_get) | **GET** /users/{id}/categories | List categories in user
+*PocketsmithClient::CategoriesApi* | [**users_id_categories_post**](docs/CategoriesApi.md#users_id_categories_post) | **POST** /users/{id}/categories | Create category in user
+*PocketsmithClient::CategoryRulesApi* | [**categories_id_category_rules_post**](docs/CategoryRulesApi.md#categories_id_category_rules_post) | **POST** /categories/{id}/category_rules | Create category rule in category
+*PocketsmithClient::CategoryRulesApi* | [**users_id_category_rules_get**](docs/CategoryRulesApi.md#users_id_category_rules_get) | **GET** /users/{id}/category_rules | List category rules in user
+*PocketsmithClient::CurrenciesApi* | [**currencies_get**](docs/CurrenciesApi.md#currencies_get) | **GET** /currencies | List currencies
+*PocketsmithClient::CurrenciesApi* | [**currencies_id_get**](docs/CurrenciesApi.md#currencies_id_get) | **GET** /currencies/{id} | Get currency
+*PocketsmithClient::EventsApi* | [**events_id_delete**](docs/EventsApi.md#events_id_delete) | **DELETE** /events/{id} | Delete event
+*PocketsmithClient::EventsApi* | [**events_id_get**](docs/EventsApi.md#events_id_get) | **GET** /events/{id} | Get event
+*PocketsmithClient::EventsApi* | [**events_id_put**](docs/EventsApi.md#events_id_put) | **PUT** /events/{id} | Update event
+*PocketsmithClient::EventsApi* | [**scenarios_id_events_get**](docs/EventsApi.md#scenarios_id_events_get) | **GET** /scenarios/{id}/events | List events in scenario.
+*PocketsmithClient::EventsApi* | [**scenarios_id_events_post**](docs/EventsApi.md#scenarios_id_events_post) | **POST** /scenarios/{id}/events | Create event in scenario
+*PocketsmithClient::EventsApi* | [**users_id_events_get**](docs/EventsApi.md#users_id_events_get) | **GET** /users/{id}/events | List events in user.
+*PocketsmithClient::InstitutionsApi* | [**institutions_id_delete**](docs/InstitutionsApi.md#institutions_id_delete) | **DELETE** /institutions/{id} | Delete institution
+*PocketsmithClient::InstitutionsApi* | [**institutions_id_get**](docs/InstitutionsApi.md#institutions_id_get) | **GET** /institutions/{id} | Get institution
+*PocketsmithClient::InstitutionsApi* | [**institutions_id_put**](docs/InstitutionsApi.md#institutions_id_put) | **PUT** /institutions/{id} | Update institution
+*PocketsmithClient::InstitutionsApi* | [**users_id_institutions_get**](docs/InstitutionsApi.md#users_id_institutions_get) | **GET** /users/{id}/institutions | List institutions in user
+*PocketsmithClient::InstitutionsApi* | [**users_id_institutions_post**](docs/InstitutionsApi.md#users_id_institutions_post) | **POST** /users/{id}/institutions | Create institution in user
+*PocketsmithClient::LabelsApi* | [**users_id_labels_get**](docs/LabelsApi.md#users_id_labels_get) | **GET** /users/{id}/labels | List labels in user
+*PocketsmithClient::SavedSearchesApi* | [**users_id_saved_searches_get**](docs/SavedSearchesApi.md#users_id_saved_searches_get) | **GET** /users/{id}/saved_searches | List saved searches in user
+*PocketsmithClient::TimeZonesApi* | [**time_zones_get**](docs/TimeZonesApi.md#time_zones_get) | **GET** /time_zones | List time zones
+*PocketsmithClient::TransactionAccountsApi* | [**transaction_accounts_id_get**](docs/TransactionAccountsApi.md#transaction_accounts_id_get) | **GET** /transaction_accounts/{id} | Get transaction account
+*PocketsmithClient::TransactionAccountsApi* | [**transaction_accounts_id_put**](docs/TransactionAccountsApi.md#transaction_accounts_id_put) | **PUT** /transaction_accounts/{id} | Update transaction account
+*PocketsmithClient::TransactionAccountsApi* | [**users_id_transaction_accounts_get**](docs/TransactionAccountsApi.md#users_id_transaction_accounts_get) | **GET** /users/{id}/transaction_accounts | List transaction accounts in user
+*PocketsmithClient::TransactionsApi* | [**accounts_id_transactions_get**](docs/TransactionsApi.md#accounts_id_transactions_get) | **GET** /accounts/{id}/transactions | List transactions in account
+*PocketsmithClient::TransactionsApi* | [**categories_id_transactions_get**](docs/TransactionsApi.md#categories_id_transactions_get) | **GET** /categories/{id}/transactions | List transactions in categories
+*PocketsmithClient::TransactionsApi* | [**transaction_accounts_id_transactions_get**](docs/TransactionsApi.md#transaction_accounts_id_transactions_get) | **GET** /transaction_accounts/{id}/transactions | List transactions in transaction account
+*PocketsmithClient::TransactionsApi* | [**transaction_accounts_id_transactions_post**](docs/TransactionsApi.md#transaction_accounts_id_transactions_post) | **POST** /transaction_accounts/{id}/transactions | Create a transaction in transaction account
+*PocketsmithClient::TransactionsApi* | [**transactions_id_delete**](docs/TransactionsApi.md#transactions_id_delete) | **DELETE** /transactions/{id} | Delete transaction
+*PocketsmithClient::TransactionsApi* | [**transactions_id_get**](docs/TransactionsApi.md#transactions_id_get) | **GET** /transactions/{id} | Get a transaction
+*PocketsmithClient::TransactionsApi* | [**transactions_id_put**](docs/TransactionsApi.md#transactions_id_put) | **PUT** /transactions/{id} | Update a transaction
+*PocketsmithClient::TransactionsApi* | [**users_id_transactions_get**](docs/TransactionsApi.md#users_id_transactions_get) | **GET** /users/{id}/transactions | List transactions in user
+*PocketsmithClient::UsersApi* | [**me_get**](docs/UsersApi.md#me_get) | **GET** /me | Get the authorised user
+*PocketsmithClient::UsersApi* | [**users_id_get**](docs/UsersApi.md#users_id_get) | **GET** /users/{id} | Get user
+*PocketsmithClient::UsersApi* | [**users_id_put**](docs/UsersApi.md#users_id_put) | **PUT** /users/{id} | Update user
 
 
 ## Documentation for Models
 
- - [PocketsmithRubyClient::Account](docs/Account.md)
- - [PocketsmithRubyClient::AccountsIdPutRequest](docs/AccountsIdPutRequest.md)
- - [PocketsmithRubyClient::Attachment](docs/Attachment.md)
- - [PocketsmithRubyClient::AttachmentContentTypeMeta](docs/AttachmentContentTypeMeta.md)
- - [PocketsmithRubyClient::AttachmentVariants](docs/AttachmentVariants.md)
- - [PocketsmithRubyClient::AttachmentsIdPutRequest](docs/AttachmentsIdPutRequest.md)
- - [PocketsmithRubyClient::BudgetAnalysis](docs/BudgetAnalysis.md)
- - [PocketsmithRubyClient::BudgetAnalysisPackage](docs/BudgetAnalysisPackage.md)
- - [PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest](docs/CategoriesIdCategoryRulesPostRequest.md)
- - [PocketsmithRubyClient::CategoriesIdPutRequest](docs/CategoriesIdPutRequest.md)
- - [PocketsmithRubyClient::Category](docs/Category.md)
- - [PocketsmithRubyClient::CategoryRule](docs/CategoryRule.md)
- - [PocketsmithRubyClient::Currency](docs/Currency.md)
- - [PocketsmithRubyClient::CurrencySeparators](docs/CurrencySeparators.md)
- - [PocketsmithRubyClient::Error](docs/Error.md)
- - [PocketsmithRubyClient::Event](docs/Event.md)
- - [PocketsmithRubyClient::EventsIdPutRequest](docs/EventsIdPutRequest.md)
- - [PocketsmithRubyClient::Institution](docs/Institution.md)
- - [PocketsmithRubyClient::InstitutionsIdPutRequest](docs/InstitutionsIdPutRequest.md)
- - [PocketsmithRubyClient::Period](docs/Period.md)
- - [PocketsmithRubyClient::SavedSearch](docs/SavedSearch.md)
- - [PocketsmithRubyClient::Scenario](docs/Scenario.md)
- - [PocketsmithRubyClient::ScenariosIdEventsPostRequest](docs/ScenariosIdEventsPostRequest.md)
- - [PocketsmithRubyClient::TimeZone](docs/TimeZone.md)
- - [PocketsmithRubyClient::Transaction](docs/Transaction.md)
- - [PocketsmithRubyClient::TransactionAccount](docs/TransactionAccount.md)
- - [PocketsmithRubyClient::TransactionAccountsIdPutRequest](docs/TransactionAccountsIdPutRequest.md)
- - [PocketsmithRubyClient::TransactionAccountsIdTransactionsPostRequest](docs/TransactionAccountsIdTransactionsPostRequest.md)
- - [PocketsmithRubyClient::TransactionsIdAttachmentsPostRequest](docs/TransactionsIdAttachmentsPostRequest.md)
- - [PocketsmithRubyClient::TransactionsIdPutRequest](docs/TransactionsIdPutRequest.md)
- - [PocketsmithRubyClient::User](docs/User.md)
- - [PocketsmithRubyClient::UsersIdAccountsPostRequest](docs/UsersIdAccountsPostRequest.md)
- - [PocketsmithRubyClient::UsersIdAccountsPutRequest](docs/UsersIdAccountsPutRequest.md)
- - [PocketsmithRubyClient::UsersIdAttachmentsPostRequest](docs/UsersIdAttachmentsPostRequest.md)
- - [PocketsmithRubyClient::UsersIdCategoriesPostRequest](docs/UsersIdCategoriesPostRequest.md)
- - [PocketsmithRubyClient::UsersIdInstitutionsPostRequest](docs/UsersIdInstitutionsPostRequest.md)
- - [PocketsmithRubyClient::UsersIdPutRequest](docs/UsersIdPutRequest.md)
+ - [PocketsmithClient::Account](docs/Account.md)
+ - [PocketsmithClient::AccountsIdPutRequest](docs/AccountsIdPutRequest.md)
+ - [PocketsmithClient::Attachment](docs/Attachment.md)
+ - [PocketsmithClient::AttachmentContentTypeMeta](docs/AttachmentContentTypeMeta.md)
+ - [PocketsmithClient::AttachmentVariants](docs/AttachmentVariants.md)
+ - [PocketsmithClient::AttachmentsIdPutRequest](docs/AttachmentsIdPutRequest.md)
+ - [PocketsmithClient::BudgetAnalysis](docs/BudgetAnalysis.md)
+ - [PocketsmithClient::BudgetAnalysisPackage](docs/BudgetAnalysisPackage.md)
+ - [PocketsmithClient::CategoriesIdCategoryRulesPostRequest](docs/CategoriesIdCategoryRulesPostRequest.md)
+ - [PocketsmithClient::CategoriesIdPutRequest](docs/CategoriesIdPutRequest.md)
+ - [PocketsmithClient::Category](docs/Category.md)
+ - [PocketsmithClient::CategoryRule](docs/CategoryRule.md)
+ - [PocketsmithClient::Currency](docs/Currency.md)
+ - [PocketsmithClient::CurrencySeparators](docs/CurrencySeparators.md)
+ - [PocketsmithClient::Error](docs/Error.md)
+ - [PocketsmithClient::Event](docs/Event.md)
+ - [PocketsmithClient::EventsIdPutRequest](docs/EventsIdPutRequest.md)
+ - [PocketsmithClient::Institution](docs/Institution.md)
+ - [PocketsmithClient::InstitutionsIdPutRequest](docs/InstitutionsIdPutRequest.md)
+ - [PocketsmithClient::Period](docs/Period.md)
+ - [PocketsmithClient::SavedSearch](docs/SavedSearch.md)
+ - [PocketsmithClient::Scenario](docs/Scenario.md)
+ - [PocketsmithClient::ScenariosIdEventsPostRequest](docs/ScenariosIdEventsPostRequest.md)
+ - [PocketsmithClient::TimeZone](docs/TimeZone.md)
+ - [PocketsmithClient::Transaction](docs/Transaction.md)
+ - [PocketsmithClient::TransactionAccount](docs/TransactionAccount.md)
+ - [PocketsmithClient::TransactionAccountsIdPutRequest](docs/TransactionAccountsIdPutRequest.md)
+ - [PocketsmithClient::TransactionAccountsIdTransactionsPostRequest](docs/TransactionAccountsIdTransactionsPostRequest.md)
+ - [PocketsmithClient::TransactionsIdAttachmentsPostRequest](docs/TransactionsIdAttachmentsPostRequest.md)
+ - [PocketsmithClient::TransactionsIdPutRequest](docs/TransactionsIdPutRequest.md)
+ - [PocketsmithClient::User](docs/User.md)
+ - [PocketsmithClient::UsersIdAccountsPostRequest](docs/UsersIdAccountsPostRequest.md)
+ - [PocketsmithClient::UsersIdAccountsPutRequest](docs/UsersIdAccountsPutRequest.md)
+ - [PocketsmithClient::UsersIdAttachmentsPostRequest](docs/UsersIdAttachmentsPostRequest.md)
+ - [PocketsmithClient::UsersIdCategoriesPostRequest](docs/UsersIdCategoriesPostRequest.md)
+ - [PocketsmithClient::UsersIdInstitutionsPostRequest](docs/UsersIdInstitutionsPostRequest.md)
+ - [PocketsmithClient::UsersIdPutRequest](docs/UsersIdPutRequest.md)
 
 
 ## Documentation for Authorization

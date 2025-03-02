@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::AccountsIdPutRequest
+# PocketsmithClient::AccountsIdPutRequest
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::AccountsIdPutRequest.new(
+instance = PocketsmithClient::AccountsIdPutRequest.new(
   title: Savings,
   currency_code: NZD,
   type: bank,

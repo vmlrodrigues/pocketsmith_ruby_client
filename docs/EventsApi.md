@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::EventsApi
+# PocketsmithClient::EventsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -26,21 +26,21 @@ Deletes an event by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = '42-1601942400' # String | The unique identifier of the event.
 behaviour = 'one' # String | Whether the delete applies only to this event, to all events within the series from this event or to all events within the series.
 
 begin
   # Delete event
   api_instance.events_id_delete(id, behaviour)
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_delete: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_delete_with_http_info: #{e}"
 end
 ```
@@ -98,21 +98,21 @@ Gets a particular event by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = '42-1601942400' # String | The unique identifier of the event.
 
 begin
   # Get event
   result = api_instance.events_id_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_get: #{e}"
 end
 ```
@@ -130,7 +130,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Event>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_get_with_http_info: #{e}"
 end
 ```
@@ -169,24 +169,24 @@ Updates an event by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = '42-1601942400' # String | The unique identifier of the event.
 opts = {
-  events_id_put_request: PocketsmithRubyClient::EventsIdPutRequest.new({behaviour: 'one'}) # EventsIdPutRequest | 
+  events_id_put_request: PocketsmithClient::EventsIdPutRequest.new({behaviour: 'one'}) # EventsIdPutRequest | 
 }
 
 begin
   # Update event
   result = api_instance.events_id_put(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_put: #{e}"
 end
 ```
@@ -204,7 +204,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Event>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->events_id_put_with_http_info: #{e}"
 end
 ```
@@ -244,14 +244,14 @@ Lists events belonging to a scenario by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = 42 # Integer | The unique identifier of the scenario.
 start_date = '2020-10-01' # String | Return the events from and including this date.
 end_date = '2020-10-30' # String | Return the events until and including this date.
@@ -260,7 +260,7 @@ begin
   # List events in scenario.
   result = api_instance.scenarios_id_events_get(id, start_date, end_date)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->scenarios_id_events_get: #{e}"
 end
 ```
@@ -278,7 +278,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Event>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->scenarios_id_events_get_with_http_info: #{e}"
 end
 ```
@@ -319,24 +319,24 @@ Creates an event in a scenario by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = 42 # Integer | The unique identifier of the scenario.
 opts = {
-  scenarios_id_events_post_request: PocketsmithRubyClient::ScenariosIdEventsPostRequest.new({category_id: 42, date: '2020-10-27', amount: 11.5, repeat_type: 'once'}) # ScenariosIdEventsPostRequest | 
+  scenarios_id_events_post_request: PocketsmithClient::ScenariosIdEventsPostRequest.new({category_id: 42, date: '2020-10-27', amount: 11.5, repeat_type: 'once'}) # ScenariosIdEventsPostRequest | 
 }
 
 begin
   # Create event in scenario
   result = api_instance.scenarios_id_events_post(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->scenarios_id_events_post: #{e}"
 end
 ```
@@ -354,7 +354,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Event>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->scenarios_id_events_post_with_http_info: #{e}"
 end
 ```
@@ -394,14 +394,14 @@ Lists events belonging to a user by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::EventsApi.new
+api_instance = PocketsmithClient::EventsApi.new
 id = 42 # Integer | The unique identifier of the user.
 start_date = '2020-10-01' # String | Return the events from and including this date.
 end_date = '2020-10-30' # String | Return the events until and including this date.
@@ -410,7 +410,7 @@ begin
   # List events in user.
   result = api_instance.users_id_events_get(id, start_date, end_date)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->users_id_events_get: #{e}"
 end
 ```
@@ -428,7 +428,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Event>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling EventsApi->users_id_events_get_with_http_info: #{e}"
 end
 ```

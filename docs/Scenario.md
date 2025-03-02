@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Scenario
+# PocketsmithClient::Scenario
 
 ## Properties
 
@@ -31,7 +31,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Scenario.new(
+instance = PocketsmithClient::Scenario.new(
   id: 42,
   title: Wedding,
   description: null,

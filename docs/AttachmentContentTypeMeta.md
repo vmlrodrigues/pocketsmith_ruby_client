@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::AttachmentContentTypeMeta
+# PocketsmithClient::AttachmentContentTypeMeta
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::AttachmentContentTypeMeta.new(
+instance = PocketsmithClient::AttachmentContentTypeMeta.new(
   title: PNG,
   description: PNG image,
   extension: png

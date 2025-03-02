@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest
+# PocketsmithClient::CategoriesIdCategoryRulesPostRequest
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::CategoriesIdCategoryRulesPostRequest.new(
+instance = PocketsmithClient::CategoriesIdCategoryRulesPostRequest.new(
   payee_matches: Countdown,
   apply_to_uncategorised: true,
   apply_to_all: false

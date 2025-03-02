@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionAccountsIdTransactionsPostRequest
+# PocketsmithClient::TransactionAccountsIdTransactionsPostRequest
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::TransactionAccountsIdTransactionsPostRequest.new(
+instance = PocketsmithClient::TransactionAccountsIdTransactionsPostRequest.new(
   payee: Tex Otago,
   amount: 11.5,
   date: 2018-02-27,

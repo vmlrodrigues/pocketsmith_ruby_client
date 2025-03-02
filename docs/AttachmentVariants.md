@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::AttachmentVariants
+# PocketsmithClient::AttachmentVariants
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::AttachmentVariants.new(
+instance = PocketsmithClient::AttachmentVariants.new(
   large_url: https://image.com/image.png,
   thumb_url: https://image.com/image.png
 )

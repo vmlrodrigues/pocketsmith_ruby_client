@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::TransactionAccountsApi
+# PocketsmithClient::TransactionAccountsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -23,21 +23,21 @@ Gets a transaction account by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::TransactionAccountsApi.new
+api_instance = PocketsmithClient::TransactionAccountsApi.new
 id = 42 # Integer | The unique identifier of the transaction account.
 
 begin
   # Get transaction account
   result = api_instance.transaction_accounts_id_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->transaction_accounts_id_get: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionAccount>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->transaction_accounts_id_get_with_http_info: #{e}"
 end
 ```
@@ -94,24 +94,24 @@ Updates the transaction account by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::TransactionAccountsApi.new
+api_instance = PocketsmithClient::TransactionAccountsApi.new
 id = 42 # Integer | The unique identifier of the transaction account.
 opts = {
-  transaction_accounts_id_put_request: PocketsmithRubyClient::TransactionAccountsIdPutRequest.new # TransactionAccountsIdPutRequest | 
+  transaction_accounts_id_put_request: PocketsmithClient::TransactionAccountsIdPutRequest.new # TransactionAccountsIdPutRequest | 
 }
 
 begin
   # Update transaction account
   result = api_instance.transaction_accounts_id_put(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->transaction_accounts_id_put: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionAccount>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->transaction_accounts_id_put_with_http_info: #{e}"
 end
 ```
@@ -169,21 +169,21 @@ List all transaction accounts belonging to a user.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::TransactionAccountsApi.new
+api_instance = PocketsmithClient::TransactionAccountsApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List transaction accounts in user
   result = api_instance.users_id_transaction_accounts_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->users_id_transaction_accounts_get: #{e}"
 end
 ```
@@ -201,7 +201,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TransactionAccount>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling TransactionAccountsApi->users_id_transaction_accounts_get_with_http_info: #{e}"
 end
 ```

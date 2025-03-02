@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::BudgetAnalysis
+# PocketsmithClient::BudgetAnalysis
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::BudgetAnalysis.new(
+instance = PocketsmithClient::BudgetAnalysis.new(
   start_date: 2016-11-01,
   end_date: 2016-11-30,
   currency_code: nzd,

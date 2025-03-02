@@ -12,7 +12,7 @@ Generator version: 7.12.0
 
 require 'cgi'
 
-module PocketsmithRubyClient
+module PocketsmithClient
   class CategoriesApi
     attr_accessor :api_client
 

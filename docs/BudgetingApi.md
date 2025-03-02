@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::BudgetingApi
+# PocketsmithClient::BudgetingApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -24,14 +24,14 @@ Lists the user's budget, consisting of one or more budget analysis packages, one
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::BudgetingApi.new
+api_instance = PocketsmithClient::BudgetingApi.new
 id = 42 # Integer | The unique identifier of the account.
 opts = {
   roll_up: true # Boolean | Whether parent categories should have their children rolled up into them. When used, the children will still appear in the collection on their own, but their actual and forecast figures will be rolled up to the root parent.
@@ -41,7 +41,7 @@ begin
   # List budget for user
   result = api_instance.users_id_budget_get(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_budget_get: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<BudgetAnalysisPackage>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_budget_get_with_http_info: #{e}"
 end
 ```
@@ -99,14 +99,14 @@ Get the user's budget summary, containing an expense and income analysis for all
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::BudgetingApi.new
+api_instance = PocketsmithClient::BudgetingApi.new
 id = 42 # Integer | The unique identifier of the user.
 period = 'weeks' # String | The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
 interval = 2 # Integer | The period interval, e.g. if the interval is 2 and the period is weeks, the budget will be analysed fortnightly.
@@ -117,7 +117,7 @@ begin
   # Get budget summary for user
   result = api_instance.users_id_budget_summary_get(id, period, interval, start_date, end_date)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_budget_summary_get: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<BudgetAnalysisPackage>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_budget_summary_get_with_http_info: #{e}"
 end
 ```
@@ -178,20 +178,20 @@ Delete the user's cached forecast by recalculating the forecast.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::BudgetingApi.new
+api_instance = PocketsmithClient::BudgetingApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # Delete forecast cache for user
   api_instance.users_id_forecast_cache_delete(id)
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_forecast_cache_delete: #{e}"
 end
 ```
@@ -209,7 +209,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_forecast_cache_delete_with_http_info: #{e}"
 end
 ```
@@ -248,14 +248,14 @@ Get an income and/or expense budget analysis for the given date range and period
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::BudgetingApi.new
+api_instance = PocketsmithClient::BudgetingApi.new
 id = 42 # Integer | The unique identifier of the user.
 period = 'weeks' # String | The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
 interval = true # Integer | The period interval, e.g. if the interval is 2 and the period is weeks, the budget will be analysed fortnightly.
@@ -268,7 +268,7 @@ begin
   # Get trend analysis for user
   result = api_instance.users_id_trend_analysis_get(id, period, interval, start_date, end_date, categories, scenarios)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_trend_analysis_get: #{e}"
 end
 ```
@@ -286,7 +286,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<BudgetAnalysisPackage>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling BudgetingApi->users_id_trend_analysis_get_with_http_info: #{e}"
 end
 ```

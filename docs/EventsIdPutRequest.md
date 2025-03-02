@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::EventsIdPutRequest
+# PocketsmithClient::EventsIdPutRequest
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::EventsIdPutRequest.new(
+instance = PocketsmithClient::EventsIdPutRequest.new(
   behaviour: all,
   amount: 11.5,
   repeat_type: weekly,

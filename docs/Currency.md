@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Currency
+# PocketsmithClient::Currency
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Currency.new(
+instance = PocketsmithClient::Currency.new(
   id: nzd,
   name: New Zealand Dollar,
   minor_unit: 2,

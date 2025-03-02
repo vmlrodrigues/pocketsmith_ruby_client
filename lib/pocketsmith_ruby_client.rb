@@ -71,10 +71,10 @@ require 'pocketsmith_ruby_client/api/transaction_accounts_api'
 require 'pocketsmith_ruby_client/api/transactions_api'
 require 'pocketsmith_ruby_client/api/users_api'
 
-module PocketsmithRubyClient
+module PocketsmithClient
   class << self
     # Customize default settings for the SDK using block.
-    #   PocketsmithRubyClient.configure do |config|
+    #   PocketsmithClient.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

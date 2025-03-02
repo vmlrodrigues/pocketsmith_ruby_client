@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::ScenariosIdEventsPostRequest
+# PocketsmithClient::ScenariosIdEventsPostRequest
 
 ## Properties
 
@@ -16,7 +16,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::ScenariosIdEventsPostRequest.new(
+instance = PocketsmithClient::ScenariosIdEventsPostRequest.new(
   category_id: 42,
   date: 2020-10-27,
   amount: 11.5,

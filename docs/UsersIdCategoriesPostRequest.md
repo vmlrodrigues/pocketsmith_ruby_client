@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersIdCategoriesPostRequest
+# PocketsmithClient::UsersIdCategoriesPostRequest
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::UsersIdCategoriesPostRequest.new(
+instance = PocketsmithClient::UsersIdCategoriesPostRequest.new(
   title: Food,
   colour: #e0e7ff,
   parent_id: 42,

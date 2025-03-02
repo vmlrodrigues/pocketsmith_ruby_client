@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Attachment
+# PocketsmithClient::Attachment
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Attachment.new(
+instance = PocketsmithClient::Attachment.new(
   id: 42,
   title: Invoice for taxi,
   file_name: taxi.png,

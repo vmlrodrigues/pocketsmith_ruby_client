@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::CategoryRule
+# PocketsmithClient::CategoryRule
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::CategoryRule.new(
+instance = PocketsmithClient::CategoryRule.new(
   category: null,
   id: 1438154,
   payee_matches: Countdown,

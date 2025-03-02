@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::Error
+# PocketsmithClient::Error
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::Error.new(
+instance = PocketsmithClient::Error.new(
   error: A message describing the error that occurred.
 )
 ```

@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::LabelsApi
+# PocketsmithClient::LabelsApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -21,21 +21,21 @@ Lists labels belonging to a user by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::LabelsApi.new
+api_instance = PocketsmithClient::LabelsApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List labels in user
   result = api_instance.users_id_labels_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling LabelsApi->users_id_labels_get: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Array&lt;String&gt;
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling LabelsApi->users_id_labels_get_with_http_info: #{e}"
 end
 ```

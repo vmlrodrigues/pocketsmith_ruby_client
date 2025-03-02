@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::User
+# PocketsmithClient::User
 
 ## Properties
 
@@ -34,7 +34,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::User.new(
+instance = PocketsmithClient::User.new(
   id: 42,
   login: sampleuser69,
   name: Foo Barrington,

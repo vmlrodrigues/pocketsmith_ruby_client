@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::CategoriesApi
+# PocketsmithClient::CategoriesApi
 
 All URIs are relative to *https://api.pocketsmith.com/v2*
 
@@ -25,20 +25,20 @@ Deletes a particular category by its ID. This will delete all budgets within the
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::CategoriesApi.new
+api_instance = PocketsmithClient::CategoriesApi.new
 id = 42 # Integer | The unique identifier of the category.
 
 begin
   # Delete category
   api_instance.categories_id_delete(id)
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_delete: #{e}"
 end
 ```
@@ -56,7 +56,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_delete_with_http_info: #{e}"
 end
 ```
@@ -95,21 +95,21 @@ Gets a particular category by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::CategoriesApi.new
+api_instance = PocketsmithClient::CategoriesApi.new
 id = 42 # Integer | The unique identifier of the category.
 
 begin
   # Get category
   result = api_instance.categories_id_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_get: #{e}"
 end
 ```
@@ -127,7 +127,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Category>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_get_with_http_info: #{e}"
 end
 ```
@@ -166,24 +166,24 @@ Updates a category by its ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::CategoriesApi.new
+api_instance = PocketsmithClient::CategoriesApi.new
 id = 42 # Integer | The unique identifier of the category.
 opts = {
-  categories_id_put_request: PocketsmithRubyClient::CategoriesIdPutRequest.new # CategoriesIdPutRequest | 
+  categories_id_put_request: PocketsmithClient::CategoriesIdPutRequest.new # CategoriesIdPutRequest | 
 }
 
 begin
   # Update category
   result = api_instance.categories_id_put(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_put: #{e}"
 end
 ```
@@ -201,7 +201,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Category>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->categories_id_put_with_http_info: #{e}"
 end
 ```
@@ -241,21 +241,21 @@ Lists all categories belonging to a user by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::CategoriesApi.new
+api_instance = PocketsmithClient::CategoriesApi.new
 id = 42 # Integer | The unique identifier of the user.
 
 begin
   # List categories in user
   result = api_instance.users_id_categories_get(id)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->users_id_categories_get: #{e}"
 end
 ```
@@ -273,7 +273,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Category>>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->users_id_categories_get_with_http_info: #{e}"
 end
 ```
@@ -312,24 +312,24 @@ Creates a category belonging to the user by their ID.
 require 'time'
 require 'pocketsmith_ruby_client'
 # setup authorization
-PocketsmithRubyClient.configure do |config|
+PocketsmithClient.configure do |config|
   # Configure API key authorization: developerKey
   config.api_key['X-Developer-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-Developer-Key'] = 'Bearer'
 end
 
-api_instance = PocketsmithRubyClient::CategoriesApi.new
+api_instance = PocketsmithClient::CategoriesApi.new
 id = 42 # Integer | The unique identifier of the user.
 opts = {
-  users_id_categories_post_request: PocketsmithRubyClient::UsersIdCategoriesPostRequest.new({title: 'Food'}) # UsersIdCategoriesPostRequest | 
+  users_id_categories_post_request: PocketsmithClient::UsersIdCategoriesPostRequest.new({title: 'Food'}) # UsersIdCategoriesPostRequest | 
 }
 
 begin
   # Create category in user
   result = api_instance.users_id_categories_post(id, opts)
   p result
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->users_id_categories_post: #{e}"
 end
 ```
@@ -347,7 +347,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Category>
-rescue PocketsmithRubyClient::ApiError => e
+rescue PocketsmithClient::ApiError => e
   puts "Error when calling CategoriesApi->users_id_categories_post_with_http_info: #{e}"
 end
 ```

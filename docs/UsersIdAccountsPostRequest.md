@@ -1,4 +1,4 @@
-# PocketsmithRubyClient::UsersIdAccountsPostRequest
+# PocketsmithClient::UsersIdAccountsPostRequest
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'pocketsmith_ruby_client'
 
-instance = PocketsmithRubyClient::UsersIdAccountsPostRequest.new(
+instance = PocketsmithClient::UsersIdAccountsPostRequest.new(
   institution_id: 42,
   title: Foo,
   currency_code: NZD,
